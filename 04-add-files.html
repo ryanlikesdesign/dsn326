@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Add Your Files — DSN 326</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <p class="course-label">DSN 326 — Step 04</p>
+      <h1>Add Your Files</h1>
+      <p class="subtitle">Upload your HTML, CSS, and images to your repository — all from the browser.</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="breadcrumb">
+      <a href="index.html">← Back to Getting Started</a>
+    </div>
+
+    <div class="page-content">
+
+      <h3>Two Ways to Add Files</h3>
+      <p>
+        You can either <strong>upload files</strong> from your computer or <strong>create files</strong>
+        directly in GitHub's browser editor. We'll cover both.
+      </p>
+
+      <h3>Option A: Upload Files From Your Computer</h3>
+      <p>This is the easiest method if you've already been working on your files locally.</p>
+
+      <ol>
+        <li>Go to your repository page on GitHub.</li>
+        <li>Click the <strong>"Add file"</strong> dropdown button (near the top, next to the green "Code" button).</li>
+        <li>Select <strong>"Upload files"</strong>.</li>
+        <li>Drag and drop your files into the upload area, or click "choose your files" to browse.
+          <div class="tip">
+            <strong>Tip:</strong> You can upload multiple files and even entire folders at once.
+            Drag a whole folder from your computer into the upload area.
+          </div>
+        </li>
+        <li>At the bottom of the page, you'll see a "Commit changes" section. Leave the default message or write something like "Add initial site files."</li>
+        <li>Click <strong>"Commit changes"</strong>.</li>
+      </ol>
+
+      <h3>Option B: Create a File in the Browser</h3>
+      <p>This is useful for creating new files or making quick edits.</p>
+
+      <ol>
+        <li>Go to your repository page on GitHub.</li>
+        <li>Click the <strong>"Add file"</strong> dropdown and select <strong>"Create new file"</strong>.</li>
+        <li>In the filename field at the top, type the name of your file — for example, <code>index.html</code>.</li>
+        <li>In the large text editor below, type or paste your HTML code.</li>
+        <li>Scroll down and click <strong>"Commit changes"</strong>.</li>
+      </ol>
+
+      <div class="warning">
+        <strong>Critical:</strong> Your main page <em>must</em> be named <code>index.html</code>
+        (all lowercase). This is the file GitHub Pages will load when someone visits your site URL.
+        If you name it <code>Index.html</code>, <code>home.html</code>, or anything else,
+        your site won't load properly.
+      </div>
+
+      <h3>Creating Folders (Subfolders)</h3>
+      <p>
+        To create a folder inside your repo (for example, a <code>css</code> or <code>images</code> folder):
+      </p>
+      <ol>
+        <li>Click <strong>"Add file" → "Create new file"</strong>.</li>
+        <li>In the filename field, type the folder name followed by a slash, then the filename.
+        For example: <code>css/style.css</code>. GitHub will automatically create the <code>css</code> folder.</li>
+        <li>Add your CSS code and commit.</li>
+      </ol>
+
+      <h3>Your First File: A Starter <code>index.html</code></h3>
+      <p>If you don't have files yet, here's a minimal starter page you can use:</p>
+
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;title&gt;My Design System&lt;/title&gt;
+  &lt;link rel="stylesheet" href="style.css"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1&gt;Welcome to My Design System&lt;/h1&gt;
+  &lt;p&gt;This site is under construction.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+      <p>And a matching starter <code>style.css</code>:</p>
+
+<pre><code>body {
+  font-family: sans-serif;
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  color: #333;
+}
+
+h1 {
+  color: #1a1a2e;
+}</code></pre>
+
+      <h3>Quick Checklist</h3>
+      <ul class="checklist">
+        <li>I have an <code>index.html</code> file in the root of my repo (not inside a folder)</li>
+        <li>My CSS file is linked correctly in the HTML</li>
+        <li>My file and folder names are all lowercase with no spaces</li>
+        <li>I committed my changes</li>
+      </ul>
+
+    </div>
+
+    <nav class="page-nav">
+      <a href="03-create-repository.html">← Previous: Create a Repository</a>
+      <a href="05-enable-github-pages.html">Next: Enable GitHub Pages →</a>
+    </nav>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>DSN 326 — Web Design &amp; Development</p>
+    </div>
+  </footer>
+</body>
+</html>

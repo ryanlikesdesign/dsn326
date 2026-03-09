@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Enable GitHub Pages — DSN 326</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <p class="course-label">DSN 326 — Step 05</p>
+      <h1>Enable GitHub Pages</h1>
+      <p class="subtitle">This is where your repo becomes a live website.</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="breadcrumb">
+      <a href="index.html">← Back to Getting Started</a>
+    </div>
+
+    <div class="page-content">
+
+      <h3>Before You Start</h3>
+      <p>Make sure you have:</p>
+      <ul>
+        <li>A repository with at least an <code>index.html</code> file in it</li>
+        <li>The repository set to <strong>Public</strong></li>
+      </ul>
+
+      <h3>Step-by-Step: Turn On GitHub Pages</h3>
+
+      <ol>
+        <li>
+          <strong>Go to your repository</strong> on GitHub (for example, <code>github.com/yourusername/design-system</code>).
+        </li>
+        <li>
+          Click the <strong>"Settings"</strong> tab at the top of the repo page.
+          It's in the navigation bar alongside "Code," "Issues," "Pull requests," etc.
+        </li>
+        <li>
+          In the left sidebar, scroll down to the <strong>"Code and automation"</strong> section
+          and click <strong>"Pages"</strong>.
+        </li>
+        <li>
+          Under <strong>"Source"</strong>, you'll see a dropdown that says "None" or "Deploy from a branch."
+          Select <strong>"Deploy from a branch"</strong>.
+        </li>
+        <li>
+          A new dropdown will appear asking which branch to deploy.
+          Select <strong><code>main</code></strong> (this is your default branch).
+        </li>
+        <li>
+          For the folder dropdown, leave it set to <strong><code>/ (root)</code></strong>.
+          This tells GitHub to look for your <code>index.html</code> at the top level of your repo.
+        </li>
+        <li>
+          Click <strong>"Save"</strong>.
+        </li>
+      </ol>
+
+      <div class="note">
+        <strong>That's it!</strong> GitHub is now building your site. It usually takes
+        <strong>1–3 minutes</strong> for your site to go live. You'll see a message at the top of
+        the Pages settings that says "Your site is live at..." with your URL.
+      </div>
+
+      <h3>Your Site URL</h3>
+      <p>
+        Your published site will be at:<br>
+        <code>https://yourusername.github.io/your-repo-name/</code>
+      </p>
+      <p>
+        For example, if your GitHub username is <code>janedoe</code> and your repo is called
+        <code>design-system</code>, your URL will be:<br>
+        <code>https://janedoe.github.io/design-system/</code>
+      </p>
+
+      <h3>What If I Don't See My Site?</h3>
+      <div class="step-block">
+        <strong>Wait a couple of minutes.</strong>
+        GitHub Pages doesn't publish instantly. Give it 1–3 minutes, then refresh the page.
+        You can also check the "Actions" tab in your repo to see if the deployment is still in progress.
+      </div>
+      <div class="step-block">
+        <strong>Check that you have an <code>index.html</code> file.</strong>
+        GitHub Pages needs a file named exactly <code>index.html</code> (lowercase) at the root of your repo.
+        If the file is named something else or is inside a subfolder, it won't load as the homepage.
+      </div>
+      <div class="step-block">
+        <strong>Make sure your repo is Public.</strong>
+        Go to Settings → General → scroll to "Danger Zone" and check that the repository visibility is "Public."
+      </div>
+      <div class="step-block">
+        <strong>Check the branch setting.</strong>
+        Go back to Settings → Pages and verify the source is set to <code>main</code> branch and <code>/ (root)</code> folder.
+      </div>
+
+      <h3>Quick Checklist</h3>
+      <ul class="checklist">
+        <li>I went to Settings → Pages</li>
+        <li>I selected "Deploy from a branch"</li>
+        <li>I chose the <code>main</code> branch and <code>/ (root)</code> folder</li>
+        <li>I clicked Save</li>
+        <li>I can see my live site URL</li>
+      </ul>
+
+    </div>
+
+    <nav class="page-nav">
+      <a href="04-add-files.html">← Previous: Add Your Files</a>
+      <a href="06-publish-and-update.html">Next: Publish &amp; Update →</a>
+    </nav>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>DSN 326 — Web Design &amp; Development</p>
+    </div>
+  </footer>
+</body>
+</html>

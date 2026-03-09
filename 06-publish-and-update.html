@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Publish &amp; Update Your Site — DSN 326</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <p class="course-label">DSN 326 — Step 06</p>
+      <h1>Publish &amp; Update Your Site</h1>
+      <p class="subtitle">How to make changes and see them go live.</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="breadcrumb">
+      <a href="index.html">← Back to Getting Started</a>
+    </div>
+
+    <div class="page-content">
+
+      <h3>Your Site Is Live — Now What?</h3>
+      <p>
+        Once GitHub Pages is enabled, every change you commit to your repository will
+        automatically update your live website. There's no "publish" button to press —
+        just save (commit) your changes and GitHub rebuilds your site within a minute or two.
+      </p>
+
+      <h3>How to Edit an Existing File</h3>
+      <ol>
+        <li>Go to your repository on GitHub.</li>
+        <li>Click on the file you want to edit (for example, <code>index.html</code>).</li>
+        <li>Click the <strong>pencil icon</strong> (edit button) in the top-right corner of the file view.</li>
+        <li>Make your changes in the editor.</li>
+        <li>Scroll down and click <strong>"Commit changes"</strong>.</li>
+        <li>In the popup, you can write a brief description of what you changed (optional but recommended), then click <strong>"Commit changes"</strong> again.</li>
+      </ol>
+
+      <div class="tip">
+        <strong>Tip:</strong> After committing, wait about 1–2 minutes, then visit your site URL
+        and do a <strong>hard refresh</strong> (Ctrl+Shift+R on Windows, Cmd+Shift+R on Mac)
+        to see the updated version. Browsers sometimes cache the old version.
+      </div>
+
+      <h3>How to Replace a File</h3>
+      <p>
+        If you've been working on a file locally and want to replace the version on GitHub:
+      </p>
+      <ol>
+        <li>Go to your repo and click <strong>"Add file" → "Upload files"</strong>.</li>
+        <li>Upload the updated file. If it has the exact same name as an existing file, GitHub will replace it.</li>
+        <li>Commit the changes.</li>
+      </ol>
+
+      <h3>How to Delete a File</h3>
+      <ol>
+        <li>Click on the file in your repository.</li>
+        <li>Click the <strong>three-dot menu</strong> (⋯) in the top-right corner of the file view.</li>
+        <li>Select <strong>"Delete file"</strong>.</li>
+        <li>Commit the deletion.</li>
+      </ol>
+
+      <h3>Checking If Your Site Deployed Successfully</h3>
+      <p>
+        If you want to verify that your latest changes are live:
+      </p>
+      <ol>
+        <li>Go to your repo and click the <strong>"Actions"</strong> tab.</li>
+        <li>You'll see a list of recent deployments. A green checkmark means it deployed successfully. An orange circle means it's still building. A red X means something went wrong.</li>
+        <li>If you see a red X, click on the failed deployment to see what went wrong. The most common issue is a broken file reference (like linking to a CSS file that doesn't exist).</li>
+      </ol>
+
+      <h3>Common Issues &amp; Fixes</h3>
+
+      <div class="step-block">
+        <strong>"My changes aren't showing up"</strong><br>
+        Wait 1–2 minutes and do a hard refresh (Ctrl+Shift+R or Cmd+Shift+R). Browser caching is the most common reason changes seem to not work.
+      </div>
+
+      <div class="step-block">
+        <strong>"My CSS isn't loading"</strong><br>
+        Check your <code>&lt;link&gt;</code> tag in the HTML. The <code>href</code> path must exactly match the file location in your repo. If your CSS is at the root, use <code>href="style.css"</code>. If it's in a <code>css</code> folder, use <code>href="css/style.css"</code>.
+      </div>
+
+      <div class="step-block">
+        <strong>"My images aren't showing"</strong><br>
+        Same idea — check that the <code>src</code> path in your <code>&lt;img&gt;</code> tags exactly matches the file location. Also make sure the image file was actually uploaded to the repo. File names are case-sensitive.
+      </div>
+
+      <div class="step-block">
+        <strong>"I get a 404 error"</strong><br>
+        Make sure your main page is named <code>index.html</code> (not <code>Index.html</code>, not <code>home.html</code>). Also check that GitHub Pages is still enabled in Settings → Pages.
+      </div>
+
+      <h3>Quick Checklist</h3>
+      <ul class="checklist">
+        <li>I know how to edit files directly on GitHub</li>
+        <li>I know how to upload new or replacement files</li>
+        <li>I know to wait 1–2 minutes and hard-refresh after changes</li>
+        <li>I know how to check the Actions tab for deployment status</li>
+      </ul>
+
+    </div>
+
+    <nav class="page-nav">
+      <a href="05-enable-github-pages.html">← Previous: Enable GitHub Pages</a>
+      <a href="07-file-structure.html">Next: File Structure &amp; Best Practices →</a>
+    </nav>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>DSN 326 — Web Design &amp; Development</p>
+    </div>
+  </footer>
+</body>
+</html>

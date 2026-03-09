@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>File Structure &amp; Best Practices — DSN 326</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <p class="course-label">DSN 326 — Step 07</p>
+      <h1>File Structure &amp; Best Practices</h1>
+      <p class="subtitle">How to organize a multi-page site so everything works correctly.</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="breadcrumb">
+      <a href="index.html">← Back to Getting Started</a>
+    </div>
+
+    <div class="page-content">
+
+      <h3>Recommended Folder Structure</h3>
+      <p>
+        For a multi-page design system site, organize your repo like this:
+      </p>
+
+<pre><code>your-repo/
+├── index.html          ← Your homepage (required)
+├── style.css           ← Your main stylesheet
+├── colors.html         ← A page about your color palette
+├── typography.html     ← A page about your type system
+├── components.html     ← A page about your UI components
+└── images/
+    ├── logo.png
+    ├── color-swatches.png
+    └── button-example.png</code></pre>
+
+      <p>
+        This is the simplest approach: all HTML pages at the root level, one shared CSS file, and
+        an <code>images</code> folder for any graphics.
+      </p>
+
+      <h3>Naming Rules</h3>
+      <p>GitHub Pages (and the web in general) are picky about file names. Follow these rules to avoid broken links:</p>
+
+      <div class="step-block">
+        <strong>Use all lowercase letters.</strong><br>
+        <code>colors.html</code> ✓ &nbsp;&nbsp; <code>Colors.html</code> ✗<br>
+        File names are case-sensitive on the web. If your link says <code>colors.html</code> but the file is named <code>Colors.html</code>, it will break.
+      </div>
+
+      <div class="step-block">
+        <strong>Use hyphens instead of spaces.</strong><br>
+        <code>my-components.html</code> ✓ &nbsp;&nbsp; <code>my components.html</code> ✗<br>
+        Spaces in file names cause problems in URLs. Use hyphens to separate words.
+      </div>
+
+      <div class="step-block">
+        <strong>Avoid special characters.</strong><br>
+        Stick to letters, numbers, and hyphens. No ampersands, parentheses, or accented characters in file names.
+      </div>
+
+      <h3>Linking Between Pages</h3>
+      <p>
+        To link from one page to another page in the same folder, just use the file name:
+      </p>
+
+<pre><code>&lt;a href="colors.html"&gt;View Colors&lt;/a&gt;
+&lt;a href="typography.html"&gt;View Typography&lt;/a&gt;
+&lt;a href="index.html"&gt;Back to Home&lt;/a&gt;</code></pre>
+
+      <p>To link to a file inside a subfolder:</p>
+
+<pre><code>&lt;!-- Linking to an image in the images folder --&gt;
+&lt;img src="images/logo.png" alt="Logo"&gt;
+
+&lt;!-- Linking to a CSS file in a css folder --&gt;
+&lt;link rel="stylesheet" href="css/style.css"&gt;</code></pre>
+
+      <div class="warning">
+        <strong>Important:</strong> Use <strong>relative paths</strong> (like <code>style.css</code> or <code>images/logo.png</code>),
+        not absolute paths (like <code>/style.css</code> or <code>C:\Users\me\style.css</code>).
+        Absolute paths won't work correctly on GitHub Pages because your site is hosted inside a subfolder
+        (<code>/your-repo-name/</code>).
+      </div>
+
+      <h3>Sharing One CSS File Across All Pages</h3>
+      <p>
+        You can (and should) use one CSS file for your entire site. Just include the same
+        <code>&lt;link&gt;</code> tag in the <code>&lt;head&gt;</code> of every HTML page:
+      </p>
+
+<pre><code>&lt;link rel="stylesheet" href="style.css"&gt;</code></pre>
+
+      <p>
+        This way, if you change a color or font in <code>style.css</code>, it updates everywhere.
+      </p>
+
+      <h3>Building a Simple Navigation</h3>
+      <p>
+        To let visitors navigate between your pages, add a <code>&lt;nav&gt;</code> section
+        to every page. Here's a simple example:
+      </p>
+
+<pre><code>&lt;nav&gt;
+  &lt;a href="index.html"&gt;Home&lt;/a&gt;
+  &lt;a href="colors.html"&gt;Colors&lt;/a&gt;
+  &lt;a href="typography.html"&gt;Typography&lt;/a&gt;
+  &lt;a href="components.html"&gt;Components&lt;/a&gt;
+&lt;/nav&gt;</code></pre>
+
+      <p>
+        Copy and paste this <code>&lt;nav&gt;</code> block into the top of every page's
+        <code>&lt;body&gt;</code> so the navigation is consistent everywhere.
+      </p>
+
+      <h3>Common Mistakes to Avoid</h3>
+
+      <div class="step-block">
+        <strong>Don't put <code>index.html</code> inside a subfolder.</strong><br>
+        Your <code>index.html</code> must be at the root (top level) of your repository, not inside a folder like <code>pages/index.html</code>. GitHub Pages looks for it at the root.
+      </div>
+
+      <div class="step-block">
+        <strong>Don't use absolute file paths from your computer.</strong><br>
+        Paths like <code>C:\Users\jane\Desktop\project\style.css</code> or <code>/Users/jane/style.css</code> will not work on the web. Always use relative paths.
+      </div>
+
+      <div class="step-block">
+        <strong>Don't forget to commit after every change.</strong><br>
+        Your changes aren't saved to GitHub until you click "Commit changes." If you close the tab before committing, your edits are lost.
+      </div>
+
+      <h3>Quick Checklist</h3>
+      <ul class="checklist">
+        <li>My <code>index.html</code> is at the root of the repo</li>
+        <li>All file names are lowercase with hyphens (no spaces)</li>
+        <li>I'm using relative paths for all links and images</li>
+        <li>All pages link to the same <code>style.css</code> file</li>
+        <li>I have a navigation section on every page</li>
+      </ul>
+
+      <div class="note">
+        <strong>Congratulations!</strong> You now know everything you need to build and publish
+        a multi-page website using GitHub Pages. If you run into issues, re-check the troubleshooting
+        section in <a href="06-publish-and-update.html">Step 06</a> or ask your instructor for help.
+      </div>
+
+    </div>
+
+    <nav class="page-nav">
+      <a href="06-publish-and-update.html">← Previous: Publish &amp; Update</a>
+      <a href="index.html">Back to Home →</a>
+    </nav>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>DSN 326 — Web Design &amp; Development</p>
+    </div>
+  </footer>
+</body>
+</html>
