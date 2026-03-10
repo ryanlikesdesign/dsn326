@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Previewing Your Work — DSN 326</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <p class="course-label">DSN 326 — Step 08</p>
+      <h1>Previewing Your Work</h1>
+      <p class="subtitle">How to see your website on your own computer before uploading it to GitHub.</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="breadcrumb">
+      <a href="index.html">← Back to Getting Started</a>
+    </div>
+
+    <div class="page-content">
+
+      <h3>Why Preview Locally?</h3>
+      <p>
+        Every time you upload files to GitHub and wait for Pages to deploy, it takes a minute or two.
+        That adds up fast when you're making lots of small changes. Instead, you can preview your
+        site <em>on your own computer</em> before uploading — so you only push files to GitHub when
+        you're happy with how they look.
+      </p>
+
+      <!-- ============================= -->
+      <!-- METHOD 1: JUST OPEN THE FILE  -->
+      <!-- ============================= -->
+
+      <h2>Method 1: Just Open the File (No Software Needed)</h2>
+      <p>
+        This is the absolute simplest way to preview your work. No downloads, no setup.
+      </p>
+
+      <ol>
+        <li>Find your <code>index.html</code> file on your computer (in Finder on Mac, or File Explorer on Windows).</li>
+        <li><strong>Double-click it.</strong> It will open in your default web browser.</li>
+        <li>You'll see your page rendered just like a real website. The URL bar will show a local file path instead of a web address — that's normal.</li>
+        <li>When you make changes to your HTML or CSS, <strong>save the file</strong> in your text editor, then go back to the browser and <strong>refresh the page</strong> (F5 or Cmd+R / Ctrl+R).</li>
+      </ol>
+
+      <div class="tip">
+        <strong>This works great for:</strong> Quick checks, simple edits, or if you don't want to install anything. The only downside is you have to manually refresh the browser every time you change something.
+      </div>
+
+      <!-- ============================= -->
+      <!-- METHOD 2: VS CODE             -->
+      <!-- ============================= -->
+
+      <h2>Method 2: VS Code + Live Server (Recommended)</h2>
+      <p>
+        <strong>Visual Studio Code</strong> (VS Code) is a free code editor made by Microsoft.
+        It's the most popular editor for web development, and with one extension called
+        <strong>Live Server</strong>, it can auto-refresh your browser every time you save a file —
+        so you see changes instantly.
+      </p>
+
+      <h3>Step 1: Download VS Code</h3>
+      <ol>
+        <li>Go to <a href="https://code.visualstudio.com" target="_blank" rel="noopener">code.visualstudio.com</a>.</li>
+        <li>Click the big <strong>Download</strong> button. It will detect whether you're on Mac or Windows automatically.</li>
+        <li>
+          <strong>Mac:</strong> Open the downloaded <code>.zip</code> file. Drag the "Visual Studio Code" app into your Applications folder. Then open it from Applications.
+        </li>
+        <li>
+          <strong>Windows:</strong> Run the downloaded <code>.exe</code> installer. Click through the setup wizard (the defaults are fine). Check the box that says "Add to PATH" if you see it.
+        </li>
+      </ol>
+
+      <h3>Step 2: Open Your Project Folder</h3>
+      <ol>
+        <li>Open VS Code.</li>
+        <li>Go to <strong>File → Open Folder</strong> (on Mac: <strong>File → Open…</strong>).</li>
+        <li>Navigate to the folder on your computer that contains your project files (<code>index.html</code>, <code>style.css</code>, etc.) and select it.</li>
+        <li>You'll see your files listed in the <strong>sidebar on the left</strong>. Click any file to open it in the editor.</li>
+      </ol>
+
+      <div class="tip">
+        <strong>Tip:</strong> Always open the <em>folder</em>, not just a single file. This way VS Code sees all your project files and the file paths in your HTML will work correctly.
+      </div>
+
+      <h3>Step 3: Install the Live Server Extension</h3>
+      <ol>
+        <li>In VS Code, click the <strong>Extensions icon</strong> in the left sidebar. It looks like four small squares (or press <code>Ctrl+Shift+X</code> on Windows / <code>Cmd+Shift+X</code> on Mac).</li>
+        <li>In the search bar at the top, type <strong>Live Server</strong>.</li>
+        <li>Look for the one by <strong>Ritwick Dey</strong> — it should be the top result and has millions of downloads.</li>
+        <li>Click the blue <strong>Install</strong> button.</li>
+        <li>Wait a few seconds for it to install. That's it — no restart needed.</li>
+      </ol>
+
+      <div class="note">
+        <strong>You only need to do this once.</strong> The extension stays installed in VS Code permanently. You won't need to install it again for future projects.
+      </div>
+
+      <h3>Step 4: Launch Live Server</h3>
+      <ol>
+        <li>In the VS Code sidebar, click on your <code>index.html</code> file to open it.</li>
+        <li>Now do one of the following:
+          <ul>
+            <li><strong>Option A:</strong> Right-click anywhere in the <code>index.html</code> file and select <strong>"Open with Live Server"</strong>.</li>
+            <li><strong>Option B:</strong> Look at the very bottom of the VS Code window (the blue status bar). You should see a <strong>"Go Live"</strong> button on the right side. Click it.</li>
+          </ul>
+        </li>
+        <li>A browser window will automatically open showing your website at an address like <code>http://127.0.0.1:5500</code>.</li>
+      </ol>
+
+      <h3>Step 5: Edit and Watch It Update</h3>
+      <p>
+        Now here's the best part: make a change in VS Code (like changing a heading or a color in your CSS), then <strong>save the file</strong> (<code>Ctrl+S</code> / <code>Cmd+S</code>). Your browser will <strong>automatically refresh</strong> and show the change instantly. No clicking refresh, no waiting.
+      </p>
+
+      <div class="step-block">
+        <strong>The workflow:</strong><br>
+        1. Edit code in VS Code<br>
+        2. Press <code>Ctrl+S</code> / <code>Cmd+S</code> to save<br>
+        3. Browser updates automatically<br>
+        4. Repeat until you're happy<br>
+        5. Upload finished files to GitHub
+      </div>
+
+      <h3>To Stop Live Server</h3>
+      <p>
+        Click the <strong>"Port: 5500"</strong> button in the VS Code status bar (bottom-right),
+        or close VS Code. The local preview will stop.
+      </p>
+
+      <!-- ============================= -->
+      <!-- RECOMMENDED WORKFLOW           -->
+      <!-- ============================= -->
+
+      <h2>Recommended Workflow for This Class</h2>
+
+      <p>Here's the workflow that will save you the most time:</p>
+
+      <div class="step-block">
+        <strong>1. Build &amp; preview locally.</strong><br>
+        Keep your project folder on your computer. Edit files in VS Code, preview with Live Server.
+        Make all your changes here first.
+      </div>
+
+      <div class="step-block">
+        <strong>2. Upload to GitHub when ready.</strong><br>
+        Once your page looks good locally, go to your GitHub repo, click "Add file → Upload files,"
+        and drag your updated files in. Commit the changes.
+      </div>
+
+      <div class="step-block">
+        <strong>3. Verify on GitHub Pages.</strong><br>
+        Wait a minute or two, then visit your <code>github.io</code> URL to make sure everything
+        looks right on the live site. Do a hard refresh (<code>Ctrl+Shift+R</code> / <code>Cmd+Shift+R</code>) if it looks outdated.
+      </div>
+
+      <div class="warning">
+        <strong>Don't edit files in two places.</strong> Pick one location as your "source of truth."
+        We recommend keeping your files on your computer as the main copy, and uploading to GitHub
+        as the publishing step. If you edit files directly on GitHub <em>and</em> on your computer,
+        the two versions will get out of sync and it gets confusing.
+      </div>
+
+      <!-- ============================= -->
+      <!-- TROUBLESHOOTING               -->
+      <!-- ============================= -->
+
+      <h3>Troubleshooting</h3>
+
+      <div class="step-block">
+        <strong>"I don't see the Go Live button in VS Code"</strong><br>
+        Make sure you installed the Live Server extension (Step 3 above). Also make sure you have an HTML file open — the Go Live button only appears when you have an HTML file active.
+      </div>
+
+      <div class="step-block">
+        <strong>"My CSS isn't loading in the local preview"</strong><br>
+        Make sure the path in your <code>&lt;link&gt;</code> tag matches your actual file structure. If <code>style.css</code> is in the same folder as <code>index.html</code>, use <code>href="style.css"</code>. Open VS Code's built-in terminal (<code>Ctrl+`</code>) and check that both files are in the same folder.
+      </div>
+
+      <div class="step-block">
+        <strong>"My page looks different locally vs. on GitHub Pages"</strong><br>
+        This usually means a file path issue. Check that all your paths are relative (like <code>style.css</code>, not <code>/style.css</code> or <code>C:\Users\...\style.css</code>). What works locally should work on GitHub Pages if you're using relative paths.
+      </div>
+
+      <div class="step-block">
+        <strong>"VS Code looks overwhelming"</strong><br>
+        It's normal to feel that way at first. For this class, you only need to know three things: open a folder (File → Open Folder), edit files in the main editor area, and save with <code>Ctrl+S</code> / <code>Cmd+S</code>. You can ignore everything else.
+      </div>
+
+      <h3>Quick Checklist</h3>
+      <ul class="checklist">
+        <li>I have VS Code installed</li>
+        <li>I installed the Live Server extension</li>
+        <li>I can open my project folder in VS Code</li>
+        <li>I can launch Live Server and see my site in the browser</li>
+        <li>Changes I save in VS Code auto-refresh in the browser</li>
+      </ul>
+
+    </div>
+
+    <nav class="page-nav">
+      <a href="07-file-structure.html">← Previous: File Structure</a>
+      <a href="index.html">Back to Home →</a>
+    </nav>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>DSN 326 — Web Design &amp; Development</p>
+    </div>
+  </footer>
+</body>
+</html>
